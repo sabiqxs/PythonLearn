@@ -6,7 +6,8 @@ contacts = [
         'height': 1.8,  # meters
         'languages': ['English', 'Spanish'],
         'address': '123 Maple St.',
-        'phone': '(555) 555-5555'
+        'phone': '(555) 555-5555',
+        'Status' : 'Married'
     },
 
     {'name': 'Sally',
@@ -15,7 +16,8 @@ contacts = [
      'height': 1.5,  # meters
      'languages': ['English'],
      'address': '456 Elm St.',
-     'phone': '(555) 555-1234'
+     'phone': '(555) 555-1234',
+     'Status' : 'Single'
      }
 ]
 
