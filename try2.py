@@ -24,3 +24,5 @@ contacts = [
 for contact in contacts:
     print("Name:", contact['name'])
     print("Married:", contact['married'])
+    print("Tinggi: ", contact['height'])
+    print()
