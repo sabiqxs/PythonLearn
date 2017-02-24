@@ -1,14 +1,14 @@
 import sqlite3
 
-idPegawai = input('id pegawai: ')
-namaPegawai = input('nama pegawai: ')
-tanggalLahir = input('tanggal lahir: ')
-gaji = input('gaji karyawan: ')
-
-print('input idPegawai: ', idPegawai)
-print('input nama pegawai: ', namaPegawai)
-print('input tanggal lahir', tanggalLahir)
-print('input gaji karyawan: ', gaji)
+# idPegawai = input('id pegawai: ')
+# namaPegawai = input('nama pegawai: ')
+# tanggalLahir = input('tanggal lahir: ')
+# gaji = input('gaji karyawan: ')
+#
+# print('input idPegawai: ', idPegawai)
+# print('input nama pegawai: ', namaPegawai)
+# print('input tanggal lahir', tanggalLahir)
+# print('input gaji karyawan: ', gaji)
 conn = sqlite3.connect('learnSQL.db')
 c = conn.cursor()
 
@@ -21,6 +21,30 @@ def data_entry():
     conn.commit()
     c.close()
     conn.close()
+def read_from_db():
+    c.execute('SELECT * FROM dataPegawai')
+    # data = c.fetchall()
+    # print(data)
+    for row in c.fetchall():
+        print(row)
+def updateData():
+    # c.execute('SELECT * FROM dataPegawai')
+    # [print(row) for row in c.fetchall()]
+    namaResult='gundul'
+    namaSelect='jijik'
+    c.execute("UPDATE dataPegawai SET namaPegawai = ? WHERE namaPegawai = ?", (namaResult, namaSelect))
+    conn.commit()
 
+    c.execute('SELECT * FROM dataPegawai')
+    [print(row) for row in c.fetchall()]
+
+def deleteData():
+    c.execute("DELETE FROM dataPegawai WHERE namaPegawai = 'afuiiii' ")
+    conn.commit()
+    c.execute('SELECT * FROM dataPegawai')
+    [print(row) for row in c.fetchall()]
 # create_table()
-data_entry()
+# data_entry()
+# read_from_db()
+# updateData()
+deleteData()
