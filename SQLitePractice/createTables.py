@@ -1,9 +1,9 @@
 import sqlite3
 
-# idPegawai = input('id pegawai: ')
-# namaPegawai = input('nama pegawai: ')
-# tanggalLahir = input('tanggal lahir: ')
-# gaji = input('gaji karyawan: ')
+idPegawai = input('id pegawai: ')
+namaPegawai = input('nama pegawai: ')
+tanggalLahir = input('tanggal lahir: ')
+gaji = input('gaji karyawan: ')
 #
 # print('input idPegawai: ', idPegawai)
 # print('input nama pegawai: ', namaPegawai)
@@ -44,7 +44,7 @@ def deleteData():
     c.execute('SELECT * FROM dataPegawai')
     [print(row) for row in c.fetchall()]
 # create_table()
-# data_entry()
+data_entry()
 # read_from_db()
 # updateData()
 deleteData()
